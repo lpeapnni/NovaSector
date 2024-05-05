@@ -224,6 +224,8 @@ const JobRow = (props: { className?: string; job: Job; name: string }) => {
         </Stack.Item>
       </Stack>
     );
+    // DREAMS EDIT REMOVAL START - FUCK VETERAN
+    /*
     // NOVA EDIT START
   } else if (job.veteran && !data.is_veteran) {
     rightSide = (
@@ -233,6 +235,8 @@ const JobRow = (props: { className?: string; job: Job; name: string }) => {
         </Stack.Item>
       </Stack>
     );
+    */
+    // DREAMS EDIT REMOVAL END
   } else if (
     data.species_restricted_jobs &&
     data.species_restricted_jobs.indexOf(name) !== -1

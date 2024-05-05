@@ -34,10 +34,14 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 		return FALSE
 	if(job.job_flags & JOB_CANNOT_OPEN_SLOTS)
 		return FALSE
+	// DREAMS EDIT REMOVAL START - FUCK VETERAN
+	/*
 	// NOVA EDIT ADDITION START
 	if(job.veteran_only)
 		return FALSE
 	// NOVA EDIT ADDITION END
+	*/
+	// DREAMS EDIT REMOVAL END
 	return TRUE
 
 

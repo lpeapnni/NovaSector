@@ -51,7 +51,7 @@ export type Species = {
 
   enabled_features: string[];
 
-  veteran_only: boolean; // NOVA EDIT - Veteran quirks
+  //veteran_only: boolean; // NOVA EDIT - Veteran quirks // DREAMS EDIT REMOVAL - FUCK VETERAN
 
   perks: {
     positive: Perk[];
@@ -92,7 +92,7 @@ export type Quirk = {
   value: number;
   customizable: boolean;
   customization_options?: string[];
-  veteran_only: boolean; // NOVA EDIT ADDITION - Veteran quirks
+  //veteran_only: boolean; // NOVA EDIT ADDITION - Veteran quirks // DREAMS EDIT REMOVAL - FUCK VETERAN
   erp_quirk: boolean; // NOVA EDIT ADDITION - Purple ERP quirks
 };
 
@@ -179,7 +179,7 @@ export type PreferencesMenuData = {
   preview_options: string[]; // NOVA EDIT ADDITION
   preview_selection: string; // NOVA EDIT ADDITION
 
-  is_veteran: BooleanLike; // NOVA EDIT - Veteran status
+  // is_veteran: BooleanLike; // NOVA EDIT - Veteran status // DREAMS REMOVAL - FUCK VETERAN
 
   character_preferences: {
     clothing: Record<string, string>;

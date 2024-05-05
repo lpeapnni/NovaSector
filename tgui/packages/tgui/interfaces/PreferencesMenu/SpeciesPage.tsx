@@ -276,9 +276,13 @@ const SpeciesPageInner = (props: {
                   <Button
                     key={speciesKey}
                     onClick={() => {
+                      // DREAMS EDIT REMOVAL START - FUCK VETERAN
+                      /*
                       if (species.veteran_only && !data.is_veteran) {
                         return;
                       }
+                      */
+                      // DREAMS EDIT REMOVAL END
                       setSpecies(speciesKey);
                     }}
                     selected={
@@ -297,6 +301,8 @@ const SpeciesPageInner = (props: {
                     />
                   </Button>
                 );
+                // DREAMS EDIT REMOVAL START - FUCK VETERAN
+                /*
                 if (species.veteran_only && !data.is_veteran) {
                   let tooltipContent =
                     species.name +
@@ -305,6 +311,8 @@ const SpeciesPageInner = (props: {
                     <Tooltip content={tooltipContent}>{speciesPage}</Tooltip>
                   );
                 }
+                */
+                // DREAMS EDIT REMOVAL END
                 return speciesPage;
                 // NOVA EDIT END
               })}
