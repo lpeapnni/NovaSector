@@ -6303,6 +6303,7 @@
 #include "modular_dreams\modules\jobs\datums\id_trim\_dreams.dm"
 #include "modular_dreams\modules\jobs\datums\id_trim\prisoner.dm"
 #include "modular_dreams\modules\jobs\departments\departments.dm"
+#include "modular_dreams\modules\jobs\job_types\dreams.dm"
 #include "modular_dreams\modules\jobs\job_types\prisoner\botanist.dm"
 #include "modular_dreams\modules\jobs\job_types\prisoner\cook.dm"
 #include "modular_dreams\modules\jobs\job_types\prisoner\janitor.dm"

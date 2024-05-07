@@ -1,5 +1,5 @@
 /datum/job/dreams/prisoner
-	title = "Prisoner"
+	title = "Prison Inmate"
 	total_positions = 5
 	spawn_positions = 5
 	supervisors = "the Correctional Officers"
@@ -10,9 +10,8 @@
 	outfit = /datum/outfit/job/dreams/prisoner
 
 	display_order = JOB_DISPLAY_ORDER_ASSISTANT
-	departments_list = list(
-		/datum/job_department/assistant,
-		)
+
+	department_for_prefs = /datum/job_department/assistant
 
 	required_languages = null
 	banned_quirks = list(PRISONER_RESTRICTED_QUIRKS)
@@ -42,10 +41,12 @@
 		outfit = /datum/outfit/job/dreams/prisoner/red
 
 	// add the crime to crewmember's memories
+	/*
 	var/datum/crime/past_crime = new(crime.name, crime.desc, "Central Command", "Indefinite.")
 	var/datum/record/crew/target_record = find_record(crewmember.real_name)
 	target_record.crimes += past_crime
 	target_record.recreate_manifest_photos(add_height_chart = TRUE)
+	*/
 	to_chat(crewmember, span_warning("You are imprisoned for \"[crime_name]\"."))
 	crewmember.add_mob_memory(/datum/memory/key/permabrig_crimes, crimes = crime_name)
 
