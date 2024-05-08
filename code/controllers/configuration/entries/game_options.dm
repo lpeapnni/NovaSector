@@ -314,7 +314,7 @@
 	min_val = -1
 
 /datum/config_entry/string/overflow_job
-	default = JOB_ASSISTANT
+	default = JOB_INMATE // DREAMS EDIT CHANGE - ORIGINAL - default = JOB_ASSISTANT
 
 /datum/config_entry/flag/grey_assistants
 
