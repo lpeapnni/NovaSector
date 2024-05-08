@@ -483,7 +483,6 @@ export const JobsPage = () => {
               <Department department="Bureaucracy">
                 <Gap amount={6} />
               </Department>
-
             </Stack.Item>
             {/* DREAMS EDIT ADDITION END */}
           </Stack>
