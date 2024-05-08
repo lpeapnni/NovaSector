@@ -485,7 +485,7 @@ export const JobsPage = () => {
               </Department>
 
             </Stack.Item>
-            {/* DREAMS EDIT ADDITION END*/}
+            {/* DREAMS EDIT ADDITION END */}
           </Stack>
         </Stack.Item>
       </Stack>
