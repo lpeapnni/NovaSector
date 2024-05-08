@@ -1,8 +1,8 @@
 /datum/job/dreams/prisoner
-	title = "Prison Inmate"
+	title = JOB_INMATE
 	total_positions = 5
 	spawn_positions = 5
-	supervisors = "the Correctional Officers"
+	supervisors = SUPERVISOR_CO
 	description = "Waste your life away in prison."
 
 	paycheck = PAYCHECK_ZERO

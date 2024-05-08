@@ -1,5 +1,5 @@
 /datum/job/dreams/prisoner/janitor
-	title = "Prison Janitor"
+	title = JOB_PRISON_JANITOR
 	total_positions = 3
 	spawn_positions = 3
 	description = "Waste your life away cleaning up after others."

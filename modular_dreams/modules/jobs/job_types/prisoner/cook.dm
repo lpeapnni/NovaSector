@@ -1,5 +1,5 @@
 /datum/job/dreams/prisoner/cook
-	title = "Prison Cook"
+	title = JOB_PRISON_COOK
 	total_positions = 2
 	spawn_positions = 2
 	description = "Waste your life away cooking food."

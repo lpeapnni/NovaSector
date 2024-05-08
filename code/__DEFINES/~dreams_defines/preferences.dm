@@ -7,6 +7,9 @@
 /// for violent crimes (murder, arson, etc.)
 #define RED_WING 2
 
+// department experience shit
 
-// department shit
-#define EXP_TYPE_PRISONER "Inmates"
+#define EXP_TYPE_GUARD "Guard"
+#define EXP_TYPE_MAINT "Maintenance"
+#define EXP_TYPE_HEALTH "Healthcare"
+#define EXP_TYPE_BUREAU "Bureaucracy"

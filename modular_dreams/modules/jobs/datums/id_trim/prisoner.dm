@@ -1,5 +1,5 @@
 /datum/id_trim/job/dreams/prisoner
-	assignment = "Prisoner"
+	assignment = "Prison Inmate"
 	trim_state = "trim_warden"
 	department_color = COLOR_PRISONER_BLACK
 	subdepartment_color = COLOR_PRISONER_BLACK
@@ -14,7 +14,7 @@
 	threat_modifier = 1 // I'm watching you
 
 /datum/id_trim/job/dreams/prisoner/janitor
-	assignment = "Janitor"
+	assignment = "Prison Janitor"
 	minimal_access = list(
 		ACCESS_JANITOR,
 		ACCESS_SERVICE,
@@ -22,7 +22,7 @@
 	job = /datum/job/dreams/prisoner/janitor
 
 /datum/id_trim/job/dreams/prisoner/botanist
-	assignment = "Botanist"
+	assignment = "Prison Botanist"
 	minimal_access = list(
 		ACCESS_HYDROPONICS,
 		ACCESS_SERVICE,
@@ -33,7 +33,7 @@
 	job = /datum/job/dreams/prisoner/botanist
 
 /datum/id_trim/job/dreams/prisoner/cook
-	assignment = "Cook"
+	assignment = "Prison Cook"
 	minimal_access = list(
 		ACCESS_KITCHEN,
 		ACCESS_SERVICE,

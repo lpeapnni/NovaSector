@@ -29,7 +29,7 @@ SUBSYSTEM_DEF(job)
 	var/list/prioritized_jobs = list()
 	var/list/latejoin_trackers = list()
 
-	var/overflow_role = /datum/job/assistant
+	var/overflow_role = /datum/job/dreams/prisoner // DREAMS EDIT CHANGE - ORIGINAL - var/overflow_role = /datum/job/assistant
 
 	var/list/level_order = list(JP_HIGH,JP_MEDIUM,JP_LOW)
 
@@ -43,6 +43,8 @@ SUBSYSTEM_DEF(job)
 	 * Assumed Captain is always the highest in the chain of command.
 	 * See [/datum/controller/subsystem/ticker/proc/equip_characters]
 	 */
+	/*
+	// DREAMS EDIT CHANGE START - JOBS - ORIGINAL:
 	var/list/chain_of_command = list(
 		JOB_CAPTAIN = 1,
 		JOB_HEAD_OF_PERSONNEL = 2,
@@ -52,6 +54,14 @@ SUBSYSTEM_DEF(job)
 		JOB_HEAD_OF_SECURITY = 6,
 		JOB_QUARTERMASTER = 7,
 	)
+	*/
+	var/list/chain_of_command = list(
+		JOB_PRISON_WARDEN = 1,
+		JOB_CHIEF_CO = 2,
+		JOB_MAINT_HEAD = 3,
+		JOB_CHIEF_CP = 4,
+	)
+	// DREAMS EDIT CHANGE END
 
 	/// If TRUE, some player has been assigned Captaincy or Acting Captaincy at some point during the shift and has been given the spare ID safe code.
 	var/assigned_captain = FALSE
@@ -835,9 +845,15 @@ SUBSYSTEM_DEF(job)
 	var/where = new_captain.equip_in_one_of_slots(paper, slots, FALSE, indirect_action = TRUE) || "at your feet"
 
 	if(acting_captain)
-		to_chat(new_captain, span_notice("Due to your position in the chain of command, you have been promoted to Acting Captain. You can find in important note about this [where]."))
+		// DREAMS EDIT CHANGE START
+		// ORIGINAL - to_chat(new_captain, span_notice("Due to your position in the chain of command, you have been promoted to Acting Captain. You can find in important note about this [where]."))
+		to_chat(new_captain, span_notice("Due to your position in the chain of command, you have been promoted to Acting Warden. You can find in important note about this [where]."))
+		// DREAMS EDIT CHANGE END
 	else
-		to_chat(new_captain, span_notice("You can find the code to obtain your spare ID from the secure safe on the Bridge [where]."))
+		// DREAMS EDIT CHANGE START
+		// ORIGINAL - to_chat(new_captain, span_notice("You can find the code to obtain your spare ID from the secure safe on the Bridge [where]."))
+		to_chat(new_captain, span_notice("You can find the code to obtain your spare ID from the secure safe [where].")) // removing reference to the bridge
+		// DREAMS EDIT CHANGE END
 		new_captain.add_mob_memory(/datum/memory/key/captains_spare_code, safe_code = SSid_access.spare_id_safe_code)
 
 	// Force-give their ID card bridge access.

@@ -1,5 +1,5 @@
 /datum/job/dreams/prisoner/botanist
-	title = "Prison Botanist"
+	title = JOB_PRISON_BOTANIST
 	total_positions = 3
 	spawn_positions = 3
 	description = "Waste your life away growing plants."
