@@ -20,7 +20,6 @@
 // bureaucracy
 #define JOB_PRISON_WARDEN "Prison Warden"
 
-
 // supervisor macros
 #define SUPERVISOR_WARDEN "the Prison Warden"
 #define SUPERVISOR_HOM "the Head of Maintenance"
