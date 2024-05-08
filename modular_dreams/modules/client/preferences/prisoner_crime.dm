@@ -2,6 +2,16 @@
 	/// which prison wing the crime corresponds to
 	var/prison_wing = ORANGE_WING
 
+/datum/preference/choiced/prisoner_crime/init_possible_values()
+	return assoc_to_keys(GLOB.prisoner_crimes)
+
+/datum/preference/choiced/prisoner_crime/apply_to_human(mob/living/carbon/human/target, value)
+	target.prisoner_crime = value
+	return ..()
+
+/datum/preference/choiced/prisoner_crime/create_default_value()
+	return "Other"
+
 //
 // new crimes
 //

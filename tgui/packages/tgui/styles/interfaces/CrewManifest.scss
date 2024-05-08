@@ -10,6 +10,13 @@ $department_map: (
   'Science': colors.$purple,
   'Service': colors.$green,
   'Silicon': colors.$pink,
+  // DREAMS EDIT ADDITION START - DEPARTMENTS
+  'Guard': colors.$red,
+  'Inmate': colors.$orange,
+  'Maintenance': colors.$brown,
+  'Health Care': colors.$teal,
+  'Bureaucracy': colors.fg(colors.$blue),
+  // DREAMS EDIT ADDITION END
 );
 
 .CrewManifest {

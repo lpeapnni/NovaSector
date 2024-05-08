@@ -7,7 +7,7 @@
 	faction = FACTION_STATION // this has to be faction station for it to work properly with the prefs menu.
 	paycheck = null
 	paycheck_department = null
-	job_flags = JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS
+	job_flags = JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS
 
 /datum/outfit/job/dreams
 	name = "Default"

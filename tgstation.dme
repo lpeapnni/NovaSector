@@ -6300,6 +6300,8 @@
 #include "interface\fonts\vcr_osd_mono.dm"
 #include "modular_dreams\modules\client\preferences\prisoner_crime.dm"
 #include "modular_dreams\modules\customization\modules\clothing\under\security.dm"
+#include "modular_dreams\modules\customization\modules\mob\living\carbon\human_defines.dm"
+#include "modular_dreams\modules\customization\modules\mob\living\carbon\human_helpers.dm"
 #include "modular_dreams\modules\jobs\datums\id_trim\_dreams.dm"
 #include "modular_dreams\modules\jobs\datums\id_trim\prisoner.dm"
 #include "modular_dreams\modules\jobs\departments\departments.dm"

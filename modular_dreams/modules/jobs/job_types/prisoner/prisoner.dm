@@ -11,7 +11,9 @@
 
 	display_order = JOB_DISPLAY_ORDER_ASSISTANT
 
-	department_for_prefs = /datum/job_department/assistant
+	departments_list = list(
+		/datum/job_department/prisoner,
+		)
 
 	required_languages = null
 	banned_quirks = list(PRISONER_RESTRICTED_QUIRKS)
@@ -25,30 +27,23 @@
 	if(rank != title)
 		return //not a prisoner
 
-	var/crime_name = crewmember.client?.prefs?.read_preference(/datum/preference/choiced/prisoner_crime)
-	if(!crime_name)
-		stack_trace("[crewmember] joined as a Prisoner without having a prisoner crime set.")
-		crime_name = pick(assoc_to_keys(GLOB.prisoner_crimes))
-	else if(crime_name == "Random")
-		crime_name = pick(assoc_to_keys(GLOB.prisoner_crimes))
+	if(ishuman(crewmember))
+		var/mob/living/carbon/human/target_human = crewmember
 
-	var/datum/prisoner_crime/crime = GLOB.prisoner_crimes[crime_name]
+		var/crime_name = target_human.prisoner_crime
+		if(!crime_name)
+			stack_trace("[crewmember] joined as a Prisoner without having a prisoner crime set.")
+			target_human.prisoner_crime = "Other"
 
-	// set uniform depending on crime
-	if(crime.prison_wing == LILAC_WING)
-		outfit = /datum/outfit/job/dreams/prisoner/lilac
-	else if(crime.prison_wing == RED_WING)
-		outfit = /datum/outfit/job/dreams/prisoner/red
-
-	// add the crime to crewmember's memories
-	/*
-	var/datum/crime/past_crime = new(crime.name, crime.desc, "Central Command", "Indefinite.")
-	var/datum/record/crew/target_record = find_record(crewmember.real_name)
-	target_record.crimes += past_crime
-	target_record.recreate_manifest_photos(add_height_chart = TRUE)
-	*/
-	to_chat(crewmember, span_warning("You are imprisoned for \"[crime_name]\"."))
-	crewmember.add_mob_memory(/datum/memory/key/permabrig_crimes, crimes = crime_name)
+		// add the crime to crewmember's memories
+		/*
+		var/datum/crime/past_crime = new(crime.name, crime.desc, "Central Command", "Indefinite.")
+		var/datum/record/crew/target_record = find_record(crewmember.real_name)
+		target_record.crimes += past_crime
+		target_record.recreate_manifest_photos(add_height_chart = TRUE)
+		*/
+		to_chat(crewmember, span_warning("You are imprisoned for \"[crime_name]\"."))
+		crewmember.add_mob_memory(/datum/memory/key/permabrig_crimes, crimes = crime_name)
 
 
 // outfits
@@ -66,10 +61,37 @@
 /datum/outfit/job/dreams/prisoner/pre_equip(mob/living/carbon/human/user, visualsOnly = FALSE)
 	. = ..()
 
-/datum/outfit/job/dreams/prisoner/lilac
-	name = "Lilac Wing Prisoner"
-	uniform = /obj/item/clothing/under/rank/prisoner/lilac
+	var/crime_name = user.prisoner_crime
+	if(!crime_name)
+		return
 
-/datum/outfit/job/dreams/prisoner/red
-	name = "Red Wing Prisoner"
-	uniform = /obj/item/clothing/under/rank/prisoner/red
+	var/datum/prisoner_crime/crime = GLOB.prisoner_crimes[crime_name]
+
+	// set uniform depending on crime
+	if(crime.prison_wing == LILAC_WING)
+		uniform = /obj/item/clothing/under/rank/prisoner/lilac
+	else if(crime.prison_wing == RED_WING)
+		uniform = /obj/item/clothing/under/rank/prisoner/red
+	else
+		uniform = /obj/item/clothing/under/rank/prisoner/orange
+
+/datum/outfit/job/dreams/prisoner/post_equip(mob/living/carbon/human/new_prisoner, visualsOnly)
+	. = ..()
+
+	var/implants_removed = 0
+	var/implants_total = 0
+
+	for(var/obj/item/organ/internal/cyberimp/cybernetic in new_prisoner.organs)
+		implants_total += 1
+		if (cybernetic.cannot_confiscate)
+			continue
+		QDEL_NULL(cybernetic)
+		implants_removed += 1
+
+	if (implants_removed >= 1)
+		to_chat(new_prisoner, span_warning("[(implants_total > implants_removed) ? "Some of your" : "Your"] implants have been confiscated as part of your sentence."))
+
+/datum/outfit/job/dreams/prisoner/get_types_to_preload()
+	. = ..()
+	. += /obj/item/clothing/under/rank/prisoner/lilac
+	. += /obj/item/clothing/under/rank/prisoner/red

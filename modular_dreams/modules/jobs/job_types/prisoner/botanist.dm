@@ -2,7 +2,6 @@
 	title = "Prison Botanist"
 	total_positions = 3
 	spawn_positions = 3
-	supervisors = "the Correctional Officers"
 	description = "Waste your life away growing plants."
 
 	paycheck = PAYCHECK_LOWER

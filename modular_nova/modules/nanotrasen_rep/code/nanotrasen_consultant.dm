@@ -38,7 +38,7 @@
 	)
 
 	//veteran_only = TRUE // DREAMS EDIT REMOVAL - FUCK VETERAN
-	job_flags = STATION_JOB_FLAGS | JOB_BOLD_SELECT_TEXT | JOB_CANNOT_OPEN_SLOTS
+	job_flags = NONE // DREAMS EDIT - ORIGINAL - job_flags = STATION_JOB_FLAGS | JOB_BOLD_SELECT_TEXT | JOB_CANNOT_OPEN_SLOTS
 
 /datum/outfit/job/nanotrasen_consultant
 	name = "Nanotrasen Consultant"

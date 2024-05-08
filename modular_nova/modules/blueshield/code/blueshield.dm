@@ -40,7 +40,7 @@
 	)
 
 	//veteran_only = TRUE // DREAMS EDIT REMOVAL - FUCK VETERAN
-	job_flags = STATION_JOB_FLAGS | JOB_CANNOT_OPEN_SLOTS
+	job_flags = NONE // DREAMS EDIT - ORIGINAL - job_flags = STATION_JOB_FLAGS | JOB_CANNOT_OPEN_SLOTS
 
 /datum/outfit/job/blueshield
 	name = "Blueshield"
