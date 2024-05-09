@@ -3,6 +3,7 @@
 	total_positions = 2
 	spawn_positions = 2
 	description = "Waste your life away cooking food."
+	config_tag = "PRISON_COOK"
 
 	paycheck = PAYCHECK_LOWER
 

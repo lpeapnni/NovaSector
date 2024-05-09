@@ -246,6 +246,20 @@
 		/datum/job/bouncer = /obj/item/organ/internal/cyberimp/arm/muscle,
 		/datum/job/engineering_guard = /obj/item/organ/internal/cyberimp/arm/flash,
 		// NOVA EDIT END
+		// DREAMS EDIT ADDITION START - JOBS
+		// this doesnt really matter, nova disabled this shit but i have to put this here so unit tests will pass
+		/datum/job/dreams/prisoner = /obj/item/organ/internal/heart/cybernetic,
+		/datum/job/dreams/prisoner/botanist = /obj/item/organ/internal/heart/cybernetic,
+		/datum/job/dreams/prisoner/cook = /obj/item/organ/internal/heart/cybernetic,
+		/datum/job/dreams/prisoner/janitor = /obj/item/organ/internal/heart/cybernetic,
+		/datum/job/dreams/maint_crew = /obj/item/organ/internal/heart/cybernetic,
+		/datum/job/dreams/head_of_maint = /obj/item/organ/internal/heart/cybernetic,
+		/datum/job/dreams/correctional_officer = /obj/item/organ/internal/heart/cybernetic,
+		/datum/job/dreams/chief_correctional_officer = /obj/item/organ/internal/heart/cybernetic,
+		/datum/job/dreams/physician = /obj/item/organ/internal/heart/cybernetic,
+		/datum/job/dreams/chief_physician = /obj/item/organ/internal/heart/cybernetic,
+		/datum/job/dreams/warden = /obj/item/organ/internal/heart/cybernetic,
+		// DREAMS EDIT ADDITION END
 	)
 
 /datum/station_trait/cybernetic_revolution/New()

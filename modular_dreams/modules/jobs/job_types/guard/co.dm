@@ -10,6 +10,7 @@
 	exp_requirements = 300
 	exp_required_type = EXP_TYPE_CREW
 	exp_granted_type = EXP_TYPE_CREW
+	config_tag = "CORRECTIONAL_OFFICER"
 
 	outfit = /datum/outfit/job/dreams/correctional_officer
 

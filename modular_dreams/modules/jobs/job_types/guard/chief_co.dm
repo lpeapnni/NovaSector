@@ -15,6 +15,7 @@
 	exp_required_type = EXP_TYPE_CREW
 	exp_required_type_department = EXP_TYPE_GUARD
 	exp_granted_type = EXP_TYPE_CREW
+	config_tag = "CHIEF_CO"
 
 	outfit = /datum/outfit/job/dreams/chief_correctional_officer
 

@@ -7,6 +7,7 @@
 	spawn_positions = 4
 	supervisors = SUPERVISOR_CCP
 	exp_granted_type = EXP_TYPE_CREW
+	config_tag = "CORRECTIONAL_PHYSICIAN"
 
 	outfit = /datum/outfit/job/dreams/physician
 

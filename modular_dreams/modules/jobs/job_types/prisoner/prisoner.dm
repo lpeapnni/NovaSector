@@ -4,6 +4,7 @@
 	spawn_positions = 5
 	supervisors = SUPERVISOR_CO
 	description = "Waste your life away in prison."
+	config_tag = "PRISON_INMATE"
 
 	paycheck = PAYCHECK_ZERO
 	paycheck_department = ACCOUNT_SRV

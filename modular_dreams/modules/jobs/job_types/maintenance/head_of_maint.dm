@@ -13,6 +13,7 @@
 	exp_required_type = EXP_TYPE_CREW
 	exp_required_type_department = EXP_TYPE_MAINT
 	exp_granted_type = EXP_TYPE_CREW
+	config_tag = "HEAD_OF_MAINT"
 
 	outfit = /datum/outfit/job/dreams/head_of_maint
 	departments_list = list(

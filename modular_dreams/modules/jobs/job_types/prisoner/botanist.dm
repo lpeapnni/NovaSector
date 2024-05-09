@@ -3,6 +3,7 @@
 	total_positions = 3
 	spawn_positions = 3
 	description = "Waste your life away growing plants."
+	config_tag = "PRISON_BOTANIST"
 
 	paycheck = PAYCHECK_LOWER
 

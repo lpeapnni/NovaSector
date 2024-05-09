@@ -3,6 +3,7 @@
 	total_positions = 3
 	spawn_positions = 3
 	description = "Waste your life away cleaning up after others."
+	config_tag = "PRISON_JANITOR"
 
 	paycheck = PAYCHECK_LOWER
 
