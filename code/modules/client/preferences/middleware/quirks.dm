@@ -48,7 +48,7 @@
 			"value" = initial(quirk.value),
 			"customizable" = constant_data?.is_customizable(),
 			"customization_options" = customization_options,
-			"veteran_only" = initial(quirk.veteran_only), // NOVA EDIT ADDITION - Veteran quirks
+			//"veteran_only" = initial(quirk.veteran_only), // NOVA EDIT ADDITION - Veteran quirks // DREAMS EDIT REMOVAL - FUCK VETERAN
 			"erp_quirk" = initial(quirk.erp_quirk), // NOVA EDIT ADDITION - Purple ERP quirks
 		)
 
@@ -65,12 +65,16 @@
 /datum/preference_middleware/quirks/proc/give_quirk(list/params, mob/user)
 	var/quirk_name = params["quirk"]
 
+	// DREAMS EDIT REMOVAL START - FUCK VETERAN
+	/*
 	//NOVA EDIT ADDITION
 	var/list/quirks = SSquirks.get_quirks()
 	var/datum/quirk/quirk = quirks[quirk_name]
 	if(initial(quirk.veteran_only) && !SSplayer_ranks.is_veteran(preferences?.parent))
 		return FALSE
 	//NOVA EDIT END
+	*/
+	// DREAMS EDIT REMOVAL END
 
 	var/list/new_quirks = preferences.all_quirks | quirk_name
 	if (SSquirks.filter_invalid_quirks(new_quirks, preferences.augments) != new_quirks)// NOVA EDIT - AUGMENTS+
@@ -105,6 +109,8 @@
 	var/list/selected_quirks = list()
 
 	for (var/quirk in preferences.all_quirks)
+		// DREAMS EDIT REMOVAL START - FUCK VETERAN
+		/*
 		//NOVA EDIT ADDITION
 		var/list/quirks = SSquirks.get_quirks()
 		var/datum/quirk/quirk_datum = quirks[quirk]
@@ -112,6 +118,8 @@
 			preferences.all_quirks -= quirk
 			continue
 		//NOVA EDIT END
+		*/
+		// DREAMS EDIT REMOVAL END
 		selected_quirks += sanitize_css_class_name(quirk)
 
 	return selected_quirks

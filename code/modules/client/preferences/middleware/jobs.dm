@@ -75,7 +75,7 @@
 		jobs[job.title] = list(
 			"description" = job.description,
 			"department" = department_name,
-			"veteran" = job.veteran_only, // NOVA EDIT
+			//"veteran" = job.veteran_only, // NOVA EDIT // DREAMS EDIT REMOVAL - FUCK VETERAN
 			"alt_titles" = job.alt_titles, // NOVA EDIT
 		)
 
@@ -100,10 +100,14 @@
 
 /datum/preference_middleware/jobs/get_ui_static_data(mob/user)
 	var/list/data = list()
+	// DREAMS EDIT REMOVAL START - FUCK VETERAN
+	/*
 	// NOVA EDIT
 	if(SSplayer_ranks.is_veteran(user.client))
 		data["is_veteran"] = TRUE
 	// NOVA EDIT END
+	*/
+	// DREAMS EDIT REMOVAL END
 	var/list/required_job_playtime = get_required_job_playtime(user)
 	if (!isnull(required_job_playtime))
 		data += required_job_playtime

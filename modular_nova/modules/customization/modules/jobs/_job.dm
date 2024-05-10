@@ -17,7 +17,7 @@
 	var/list/required_languages = list(/datum/language/common = LANGUAGE_SPOKEN)
 
 	///Is this job veteran only? If so, then this job requires the player to be in the veteran_players.txt
-	var/veteran_only = FALSE
+	//var/veteran_only = FALSE // DREAMS EDIT REMOVAL - FUCK VETERAN
 
 
 /datum/job/proc/has_banned_quirk(datum/preferences/pref)

@@ -12,7 +12,7 @@
 	value = 0
 	mob_trait = TRAIT_OVERSIZED
 	icon = FA_ICON_EXPAND_ARROWS_ALT
-	veteran_only = TRUE
+	//veteran_only = TRUE // DREAMS EDIT REMOVAL - FUCK VETERAN
 	quirk_flags = QUIRK_HUMAN_ONLY|QUIRK_CHANGES_APPEARANCE
 
 /datum/quirk/oversized/add(client/client_source)
@@ -94,7 +94,7 @@
 	else if(istype(gained, /obj/item/bodypart/leg))
 		var/obj/item/bodypart/leg/new_leg = gained
 		new_leg.unarmed_effectiveness = initial(new_leg.unarmed_effectiveness) + OVERSIZED_KICK_EFFECTIVENESS_BONUS
-	
+
 	gained.name = "oversized " + gained.name
 
 /datum/movespeed_modifier/oversized

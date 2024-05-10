@@ -35,8 +35,12 @@ ADMIN_VERB_ONLY_CONTEXT_MENU(show_player_panel, R_ADMIN, "Show Player Panel", mo
 		if(SSplayer_ranks.is_mentor(player.client, admin_bypass = FALSE))
 			player_ranks += "Mentor"
 
+		// DREAMS EDIT REMOVAL START - FUCK VETERAN
+		/*
 		if(SSplayer_ranks.is_veteran(player.client, admin_bypass = FALSE))
 			player_ranks += "Veteran"
+		*/
+		// DREAMS EDIT REMOVAL END
 
 		body += "<br><br><b>Player Ranks: </b>[length(player_ranks) ? player_ranks.Join(", ") : "None"]"
 		// NOVA EDIT ADDITION END

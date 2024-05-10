@@ -97,8 +97,14 @@
 		name = "[LOWER_TEXT(initial(department_type.department_name))] [name]"
 		cpu.name = name
 
+// DREAMS EDIT CHANGE - ORIGINAL
+/*
 /obj/machinery/modular_computer/preset/cargochat/proc/add_starting_software()
 	starting_programs += /datum/computer_file/program/department_order
+*/
+/obj/machinery/modular_computer/preset/cargochat/proc/add_starting_software()
+	return
+// DREAMS EDIT CHANGE END
 
 /obj/machinery/modular_computer/preset/cargochat/proc/setup_starting_software()
 	if(!department_type)
@@ -106,11 +112,16 @@
 
 	var/datum/computer_file/program/chatclient/chatprogram = cpu.find_file_by_name("ntnrc_client")
 	chatprogram.username = "[LOWER_TEXT(initial(department_type.department_name))]_department"
+	// DREAMS EDIT CHANGE - ORIGINAL
+	/*
 	cpu.idle_threads += chatprogram
 
 	var/datum/computer_file/program/department_order/orderprogram = cpu.find_file_by_name("dept_order")
 	orderprogram.set_linked_department(department_type)
 	cpu.active_program = orderprogram
+	*/
+	cpu.active_program = chatprogram
+	// DREAMS EDIT CHANGE END
 	update_appearance(UPDATE_ICON)
 
 /obj/machinery/modular_computer/preset/cargochat/service

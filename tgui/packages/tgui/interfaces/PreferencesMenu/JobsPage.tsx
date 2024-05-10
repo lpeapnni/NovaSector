@@ -224,6 +224,8 @@ const JobRow = (props: { className?: string; job: Job; name: string }) => {
         </Stack.Item>
       </Stack>
     );
+    // DREAMS EDIT REMOVAL START - FUCK VETERAN
+    /*
     // NOVA EDIT START
   } else if (job.veteran && !data.is_veteran) {
     rightSide = (
@@ -233,6 +235,8 @@ const JobRow = (props: { className?: string; job: Job; name: string }) => {
         </Stack.Item>
       </Stack>
     );
+    */
+    // DREAMS EDIT REMOVAL END
   } else if (
     data.species_restricted_jobs &&
     data.species_restricted_jobs.indexOf(name) !== -1
@@ -400,6 +404,7 @@ export const JobsPage = () => {
 
         <Stack.Item>
           <Stack fill className="PreferencesMenu__Jobs">
+            {/* DREAMS EDIT REMOVAL BEGIN - DEPARTMENTS
             <Stack.Item mr={1}>
               <Gap amount={36} />
 
@@ -445,6 +450,41 @@ export const JobsPage = () => {
 
               <Department department="Medical" />
             </Stack.Item>
+            DREAMS EDIT REMOVAL END*/}
+
+            {/* DREAMS EDIT ADDITION START - DEPARTMENTS */}
+            <Stack.Item mr={1}>
+              <Gap amount={36} />
+
+              <PriorityHeaders />
+
+              <Department department="Guard">
+                <Gap amount={6} />
+              </Department>
+
+              <Department department="Inmate" />
+            </Stack.Item>
+
+            <Stack.Item mr={1}>
+              <PriorityHeaders />
+
+              <Department department="Maintenance">
+                <Gap amount={6} />
+              </Department>
+
+              <Department department="Healthcare" />
+            </Stack.Item>
+
+            <Stack.Item>
+              <Gap amount={36} />
+
+              <PriorityHeaders />
+
+              <Department department="Bureaucracy">
+                <Gap amount={6} />
+              </Department>
+            </Stack.Item>
+            {/* DREAMS EDIT ADDITION END */}
           </Stack>
         </Stack.Item>
       </Stack>

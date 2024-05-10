@@ -19,7 +19,7 @@ SUBSYSTEM_DEF(player_ranks)
 	/// The mentor player rank controller.
 	var/datum/player_rank_controller/mentor/mentor_controller
 	/// The veteran player rank controller.
-	var/datum/player_rank_controller/veteran/veteran_controller
+	//var/datum/player_rank_controller/veteran/veteran_controller // DREAMS EDIT REMOVAL - FUCK VETERAN
 
 
 /datum/controller/subsystem/player_ranks/Initialize()
@@ -28,7 +28,7 @@ SUBSYSTEM_DEF(player_ranks)
 
 	load_donators()
 	load_mentors()
-	load_veterans()
+	//load_veterans() // DREAMS EDIT REMOVAL - FUCK VETERAN
 
 	return SS_INIT_SUCCESS
 
@@ -38,7 +38,7 @@ SUBSYSTEM_DEF(player_ranks)
 
 	QDEL_NULL(donator_controller)
 	QDEL_NULL(mentor_controller)
-	QDEL_NULL(veteran_controller)
+	//QDEL_NULL(veteran_controller) // DREAMS EDIT REMOVAL - FUCK VETERAN
 
 
 /**
@@ -77,7 +77,8 @@ SUBSYSTEM_DEF(player_ranks)
 
 	return user.is_mentor(admin_bypass)
 
-
+// DREAMS EDIT REMOVAL START - FUCK VETERAN
+/*
 /**
  * Returns whether or not the user is qualified as a veteran.
  *
@@ -97,7 +98,8 @@ SUBSYSTEM_DEF(player_ranks)
 		return TRUE
 
 	return FALSE
-
+*/
+// DREAMS EDIT REMOVAL END
 
 /// Handles loading donators either via SQL or using the legacy system,
 /// based on configs.
@@ -177,7 +179,8 @@ SUBSYSTEM_DEF(player_ranks)
 
 	load_player_rank_sql(mentor_controller)
 
-
+// DREAMS EDIT REMOVAL START- FUCK VETERAN
+/*
 /// Handles loading veteran players either via SQL or using the legacy system,
 /// based on configs.
 /datum/controller/subsystem/player_ranks/proc/load_veterans()
@@ -202,6 +205,8 @@ SUBSYSTEM_DEF(player_ranks)
 		return
 
 	load_player_rank_sql(veteran_controller)
+*/
+// DREAMS EDIT REMOVAL END
 
 
 /**
@@ -246,8 +251,12 @@ SUBSYSTEM_DEF(player_ranks)
 	if(rank_title == mentor_controller.rank_title)
 		return mentor_controller
 
+	// DREAMS EDIT REMOVAL START - FUCK VETERAN
+	/*
 	if(rank_title == veteran_controller.rank_title)
 		return veteran_controller
+	*/
+	// DREAMS EDIT REMOVAL END
 
 	CRASH("Invalid player_rank_controller \"[rank_title || "*null*"]\" used in get_controller_for_group()!")
 

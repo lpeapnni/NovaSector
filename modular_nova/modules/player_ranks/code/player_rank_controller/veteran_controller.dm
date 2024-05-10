@@ -1,3 +1,5 @@
+// DREAMS EDIT REMOVAL START - FUCK VETERAN
+/*
 /// The list of all veteran players.
 GLOBAL_LIST_EMPTY(veteran_list)
 GLOBAL_PROTECT(veteran_list)
@@ -45,3 +47,5 @@ GLOBAL_PROTECT(veteran_list)
 		return
 
 	GLOB.veteran_list = list()
+*/
+// DREAMS EDIT REMOVAL END - FUCK VETERAN

@@ -26,7 +26,7 @@
 
 	family_heirlooms = list(/obj/item/pickaxe/mini, /obj/item/shovel)
 	rpg_title = "Adventurer"
-	job_flags = STATION_JOB_FLAGS
+	job_flags = NONE // DREAMS EDIT - ORIGINAL - job_flags = STATION_JOB_FLAGS
 
 
 /datum/outfit/job/miner

@@ -1,3 +1,5 @@
+// DREAMS EDIT REMOVAL - THIS SHIT IS GETTING DISABLED. FUCK YOU.
+/*
 /datum/computer_file/program/department_order
 	filename = "dept_order"
 	filedesc = "Departmental Orders"
@@ -272,3 +274,5 @@
 		department_cooldowns[linked_department] = 0
 		return TRUE
 	return FALSE
+*/
+// DREAMS EDIT REMOVAL END
