@@ -14,6 +14,7 @@
 	exp_required_type = EXP_TYPE_CREW
 	exp_required_type_department = EXP_TYPE_HEALTH
 	exp_granted_type = EXP_TYPE_CREW
+	config_tag = "CHIEF_CP"
 
 	outfit = /datum/outfit/job/dreams/chief_physician
 

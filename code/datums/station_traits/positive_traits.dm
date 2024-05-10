@@ -248,6 +248,7 @@
 		// NOVA EDIT END
 		// DREAMS EDIT ADDITION START - JOBS
 		// this doesnt really matter, nova disabled this shit but i have to put this here so unit tests will pass
+		/datum/job/dreams = /obj/item/organ/internal/heart/cybernetic,
 		/datum/job/dreams/prisoner = /obj/item/organ/internal/heart/cybernetic,
 		/datum/job/dreams/prisoner/botanist = /obj/item/organ/internal/heart/cybernetic,
 		/datum/job/dreams/prisoner/cook = /obj/item/organ/internal/heart/cybernetic,

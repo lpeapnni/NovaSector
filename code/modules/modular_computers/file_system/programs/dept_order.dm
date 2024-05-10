@@ -26,6 +26,11 @@
 		/datum/job_department/science = 0,
 		/datum/job_department/security = 0,
 		/datum/job_department/service = 0,
+		// DREAMS EDIT ADDITION START - JOBS
+		/datum/job_department/guard = 0,
+		/datum/job_department/maintenance = 0,
+		/datum/job_department/health_care = 0,
+		// DREAMS EDIT ADDITIONS END
 	)
 	/// Reference to the order we've made UNTIL it gets sent on the supply shuttle. this is so heads can cancel it
 	VAR_PRIVATE/datum/supply_order/department_order
@@ -41,6 +46,11 @@
 		/datum/job_department/science = /obj/item/encryptionkey/headset_sci,
 		/datum/job_department/security = /obj/item/encryptionkey/headset_sec,
 		/datum/job_department/service = /obj/item/encryptionkey/headset_service,
+		// DREAMS EDIT ADDITION START - JOBS
+		/datum/job_department/guard = /obj/item/encryptionkey/headset_sec,
+		/datum/job_department/maintenance = /obj/item/encryptionkey/headset_eng,
+		/datum/job_department/health_care = /obj/item/encryptionkey/headset_med,
+		// DREAMS EDIT ADDITIONS END
 	)
 
 /// Sets the passed department type as the active department for this computer file.

@@ -6322,6 +6322,7 @@
 #include "modular_dreams\modules\jobs\job_types\prisoner\cook.dm"
 #include "modular_dreams\modules\jobs\job_types\prisoner\janitor.dm"
 #include "modular_dreams\modules\jobs\job_types\prisoner\prisoner.dm"
+#include "modular_dreams\modules\objects\effects\landmarks.dm"
 #include "modular_nova\master_files\code\_globalvars\configuration.dm"
 #include "modular_nova\master_files\code\_globalvars\regexes.dm"
 #include "modular_nova\master_files\code\_globalvars\religion.dm"
